@@ -1,0 +1,27 @@
+<%= erb :home %>
+	
+<br>
+	<h1>Here are your search results for the movie you've entered</h1>
+
+	<p>
+		<br>
+		<table class="table table-striped table-bordered">
+			<tr>
+			<th>Title</th>
+			<th>Released</th>
+			</tr>
+		<% @results["Search"].each do |item| %>
+		
+			<tr>
+				<td>
+				<a href="/single-movie-info/<%= item["imdbID"] %>"><%= item["Title"] %></a>
+				</td>
+				<td> <%= item["imdbID"]["Released"] %> </td>
+				<% end %>
+				
+			</tr>
+		</table>
+	</p>
+	<p>
+		 <%# @results["Search"][1]["Title"] %> 
+		</p>

@@ -1,0 +1,43 @@
+<%= erb :home %>
+
+<div class="">
+<h1 class="page-header"><%= @imdb_result["Title"] %></h1>
+</div>
+<br>
+
+<div class="">
+	<table class="table-bordered">
+		<tr>
+			<th>Plot Summary</th>
+		</tr>
+		<tr>
+			<td><%= @imdb_result["Plot"]    %></td>
+		</tr>
+	</table>
+</div>
+<br>
+<br>
+<div class="row">
+<div class="span7">
+<table class="table table-striped table-bordered">
+	
+		<tr><th>Year</th><td><%= @imdb_result["Year"] %></td></tr>
+		<tr><th>Rating</th><td><%= @imdb_result["Rated"] %></td></tr>
+		<tr><th>Released</th><td><%= @imdb_result["Released"] %></td></tr>
+		<tr><th>Runtime</th><td><%= @imdb_result["Runtime"] %></td></tr>
+		<tr><th>Genre</th><td><%= @imdb_result["Genre"] %></td></tr>
+		<tr><th>IMDB Rating</th><td><%= @imdb_result["imdbRating"] %></td></tr>
+		<tr><th>Director</th><td><%= @imdb_result["Director"] %></td></tr>
+		<tr><th>Writer</th><td><%= @imdb_result["Writer"] %></td></tr>
+		<tr><th>Actors</th><td><%= @imdb_result["Actors"] %></td></tr>	
+</table >
+</div>
+
+
+
+
+<div class="span5">
+	<img src="<%= @imdb_result["Poster"] %>" style="height: 10% width: 10%"/>
+</div>
+
+</div>
